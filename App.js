@@ -27,11 +27,13 @@ import {
 const App: () => React$Node = () => {
   return (
     <>
+      {/*设置状态栏*/}
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
+          {/*Header标签设置设置头部*/}
           <Header />
           {global.HermesInternal == null ? null : (
             <View style={styles.engine}>
@@ -40,28 +42,28 @@ const App: () => React$Node = () => {
           )}
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
+              <Text style={styles.sectionTitle}>第一步</Text>
               <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
+                编辑 <Text style={styles.highlight}>App.js</Text> 更改此屏幕，然后回来查看您的编辑。
               </Text>
             </View>
             <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
+              <Text style={styles.sectionTitle}>查看你的改变</Text>
               <Text style={styles.sectionDescription}>
+                {/*ReloadInstructions 系统定义的行为*/}
                 <ReloadInstructions />
               </Text>
             </View>
             <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
+              <Text style={styles.sectionTitle}>Debug模式</Text>
               <Text style={styles.sectionDescription}>
                 <DebugInstructions />
               </Text>
             </View>
             <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
+              <Text style={styles.sectionTitle}>学习更多</Text>
               <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
+                读文档发现接下来做什么:
               </Text>
             </View>
             <LearnMoreLinks />
@@ -72,9 +74,10 @@ const App: () => React$Node = () => {
   );
 };
 
+// 设置样式
 const styles = StyleSheet.create({
   scrollView: {
-    backgroundColor: Colors.lighter,
+    backgroundColor: Colors.light,
   },
   engine: {
     position: 'absolute',
